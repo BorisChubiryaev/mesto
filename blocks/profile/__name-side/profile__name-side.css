@@ -1,0 +1,11 @@
+.profile__name-side {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 7px;
+}
+
+@media screen and (max-width: 617px) {
+    .profile__name-side {
+        padding-bottom: 8px;
+    }
+}

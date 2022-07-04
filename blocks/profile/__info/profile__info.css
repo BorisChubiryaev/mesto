@@ -1,15 +1,9 @@
 .profile__info {
-    display: grid;
-    grid-template-columns: max-content min-content;
-    grid-template-rows: repeat(2, min-content);
-    grid-column-gap: 18px;
-    grid-row-gap: 16px;
-    align-items: end;
+    max-width: 336px;
 }
 
 @media screen and (max-width: 617px) {
     .profile__info {
-      grid-column-gap: 10px;
-      grid-row-gap: 14px;
+       max-width: 282px;
     }
 }

@@ -10,10 +10,15 @@ let formDescription = document.querySelector('.popup__input-about');
 
 
 const onPopup = function() {
-    popup.classList.toggle('popupOpened');
+    popup.classList.toggle('popup_opened');
 };
 
+const offPopup = function() {
+    popup.classList.remove('popup_opened');
+}
+
 openPopup.addEventListener('click', onPopup);
+closePopup.addEventListener('click', offPopup);
 
 function formSumbit(evt) {
     evt.preventDefault();
