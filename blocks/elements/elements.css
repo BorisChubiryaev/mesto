@@ -6,3 +6,21 @@
     max-width: 880px;
     padding-bottom: 67px;
 }
+
+@media screen and (max-width: 1024px) {
+    .elements {
+      width: calc(100% - 2 * 100px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .elements {
+      width: calc(100% - 2 * 50px);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .elements {
+      width: calc(100% - 2 * 19px);
+    }
+}

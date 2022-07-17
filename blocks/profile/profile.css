@@ -8,9 +8,22 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .profile {
+    width: calc(100% - 2 * 100px);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .profile {
     flex-direction: column;
     padding-bottom: 36px;
+    width: calc(100% - 2 * 50px);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .profile {
+    width: calc(100% - 2 * 19px);
   }
 }

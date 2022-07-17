@@ -14,7 +14,7 @@
             <img class="header__logo" src="./images/logo/VectorlogoWhite.svg" alt="Логотип">
         </header>
 
-        <div class="main">
+        <main>
             <section class="profile">
                 <img class="profile__avatar" src="./images/image.jpg" alt="Фото профиля">
                 <div class="profile__info">
@@ -24,71 +24,58 @@
                     </div>
                     <p class="profile__description">Исследователь океана</p>
                 </div>
-                <button class="button profile__add-button"></button>
+                <button class="button profile__add-button" type="button"></button>
             </section>
 
-            <section class="elements">
-                <div class="element">
-                    <img class="element__photo" src="./images/1.jpg" alt="Фото старого здания Карачаевска">
-                    <div class="element__description">
-                        <h3 class="element__title">Карачаевск</h3>
-                        <button class="button element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__photo" src="./images/2.jpg" alt="Фото горы Эльбрус">
-                    <div class="element__description">
-                        <h3 class="element__title">Гора Эльбрус</h3>
-                        <button class="button element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__photo" src="./images/3.jpg" alt="Фото горы Домбай">
-                    <div class="element__description">
-                        <h3 class="element__title">Домбай</h3>
-                        <button class="button element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__photo" src="./images/4.jpg" alt="Фото горы Эльбрус">
-                    <div class="element__description">
-                        <h3 class="element__title">Гора Эльбрус</h3>
-                        <button class="button element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__photo" src="./images/5.jpg" alt="Фото горы Домбай">
-                    <div class="element__description">
-                        <h3 class="element__title">Домбай</h3>
-                        <button class="button element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__photo" src="./images/6.jpg" alt="Фото старого здания Карачаевска">
-                    <div class="element__description">
-                        <h3 class="element__title">Карачаево-Черкесск</h3>
-                        <button class="button element__like" type="button"></button>
-                    </div>
-                </div>
-            </section>
-        </div>
+            <section class="elements"></section>
+            
+        </main>
 
         <footer class="footer">
             <p class="footer__copyright">© 2022 Mesto Russia</p>
         </footer>
-        
-        <div class="popup">
-            <div class="popup__container">
-                <form class="popup__form">
-                    <h3 class="popup__title">Редактировать профиль</h3>
-                    <input class="popup__input popup__input-name" placeholder="Введите имя" value="Жак-Ив Кусто" required>
-                    <input class="popup__input popup__input-about" placeholder="О себе" value="Исследователь океана" required>
-                    <button class="button popup__save" type="submit">Сохранить</button>
-                    <button class="button popup__close" type="button"></button>
-                </form>
-            </div>
+    
+        <div class="popup popup__container">
+            <form class="popup__form popup__form_profile">
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <input class="popup__input popup__input-name" name="name" placeholder="Введите имя" value="Жак-Ив Кусто" required>
+                <input class="popup__input popup__input-about" name="about" placeholder="О себе" value="Исследователь океана" required>
+                <button class="button popup__save" type="submit">Сохранить</button>
+                <button class="button popup__close popup__close-edit" type="button"></button>
+            </form>
+        </div>
+
+        <div class="popup popup__add">
+            <form class="popup__form popup__form-card">
+                <h3 class="popup__title">Новое место</h3>
+                <input class="popup__input popup__input-name popup__form-input_card_name" placeholder="Название" value="" required>
+                <input class="popup__input popup__input-about popup__form-input_card_url" placeholder="Ссыолка на картинку" value="" required>
+                <button class="button popup__save" type="submit">Сохранить</button>
+                <button class="button popup__close" id="popup__close_card" type="button"></button>
+            </form>
         </div>
     </div>
+
+    <div class="popup popup_picture">
+        <div class="popup__place">
+          <button class="button popup__close popup__close-image" type="button"></button>
+          <img class="popup__image" alt="#" src="#">
+          <p class="popup__image-description"></p>
+        </div>
+    </div>
+
+    <template class="template-element">
+        <div class="element">
+            <img class="element__photo" src="#" alt="#">
+            <div class="element__description">
+                <h3 class="element__title"></h3>
+                <button class="button element__like" type="button"></button>
+            </div>
+            <button class="button element__delete" type="button"></button>
+        </div>
+    </template>
+
     <script src="./scripts/index.js"></script>
+    
 </body>
 </html>

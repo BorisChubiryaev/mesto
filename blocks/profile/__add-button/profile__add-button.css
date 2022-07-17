@@ -2,7 +2,8 @@
     width: 150px;
     height: 50px;
     background: none;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
     margin: auto 0 auto auto;
     background-image: url('../../../images/buttons/AddButton.svg');
     background-size: 22px 22px;
