@@ -1,4 +1,4 @@
-const popupEdit = document.querySelector('.popup__container');
+const popupEdit = document.querySelector('.popup_container');
 const nameInput = document.querySelector('input[name="name"]');
 const aboutInput = document.querySelector('input[name="about"]');
 const usName = document.querySelector('.profile__name');
@@ -7,10 +7,10 @@ const formEdit = document.querySelector('.popup__form_profile');
 const editButton = document.querySelector('.profile__edit-button');
 const closePopupEdit = document.querySelector('.popup__close-edit');
 
-const popupAdd = document.querySelector('.popup__add');
+const popupAdd = document.querySelector('.popup_add');
 const formAdd = document.querySelector('.popup__form-card');
-const inputPlace = document.querySelector('.popup__form-input_card_name');
-const inputUrl = document.querySelector('.popup__form-input_card_url');
+const inputPlace = document.querySelector('.popup__form-input-name');
+const inputUrl = document.querySelector('.popup__form-input-url');
 const closePopupAdd = document.querySelector('#popup__close_card');
 const addButton = document.querySelector('.profile__add-button');
 
