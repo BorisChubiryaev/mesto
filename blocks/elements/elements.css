@@ -1,10 +1,11 @@
 .elements {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(282px, 282px));
     grid-gap: 20px 17px;
     margin: 0 auto;
     max-width: 880px;
     padding-bottom: 67px;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 1024px) {
@@ -13,9 +14,16 @@
     }
 }
 
+@media screen and (max-width: 780px) {
+  .elements {
+    
+  }
+}
+
 @media screen and (max-width: 768px) {
     .elements {
       width: calc(100% - 2 * 50px);
+      justify-content: center;
     }
 }
 

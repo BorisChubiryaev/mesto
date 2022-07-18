@@ -5,4 +5,5 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    max-width: 282px;
 }
