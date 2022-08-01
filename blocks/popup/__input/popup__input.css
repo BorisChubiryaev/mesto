@@ -7,3 +7,16 @@
     color: #000000;
     padding-bottom: 13px;
 }
+
+.popup__input:hover {
+    border-bottom-color: #000;
+}
+
+.popup__input:focus {
+    border-bottom-color: #007dff;
+}
+
+.popup__input:invalid {
+    border-bottom: 1px solid #ff0000;
+    margin-bottom: 0;
+}

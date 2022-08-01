@@ -1,4 +1,4 @@
-const popupEdit = document.querySelector('.popup_profile');
+﻿const popupEdit = document.querySelector('.popup_profile');
 const nameInput = document.querySelector('input[name="name"]');
 const aboutInput = document.querySelector('input[name="about"]');
 const usName = document.querySelector('.profile__name');
@@ -22,6 +22,8 @@ const descriptionImage = document.querySelector('.popup__image-description');
 const cardsContainer = document.querySelector('.elements');
 
 const templateElement = document.querySelector('.template-element').content;
+
+const buttonCreate = document.querySelector('.popup__save');
 
 const initialCards = [
   {
@@ -50,12 +52,30 @@ const initialCards = [
   }
 ];
 
-function closePopup(popup) {
-  popup.classList.remove('popup_opened');
+function closeByEsc(event) {
+  if (event.key === 'Escape') {
+      const openedPopup = document.querySelector('.popup_opened');
+      closePopup(openedPopup);
+  }
+}
+
+function closeByOverlayClick(event) {
+  if (event.target.classList.contains('popup')) {
+      const openedPopup = document.querySelector('.popup_opened');
+      closePopup(openedPopup);
+  }
 }
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keyup', closeByEsc);
+  popup.addEventListener('mousedown', closeByOverlayClick);
+}
+
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+  document.removeEventListener('keyup', closeByEsc);
+  popup.removeEventListener('mousedown', closeByOverlayClick);
 }
 
 function editPopupProfile() {
