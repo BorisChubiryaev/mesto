@@ -24,6 +24,7 @@ const cardsContainer = document.querySelector('.elements');
 const templateElement = document.querySelector('.template-element').content;
 
 const buttonCreate = document.querySelector('.popup__save');
+const buttonCard = document.querySelector('.popup__save_invalid');
 
 const initialCards = [
   {
@@ -130,6 +131,7 @@ function addCards(evt) {
     const card = createCard({name: inputPlace.value, link: inputUrl.value});
     cardsContainer.prepend(card);
     closePopup(popupAdd);
+    buttonCard.classList.add('popup__save_invalid');
     formAdd.reset();
 }
 

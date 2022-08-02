@@ -49,7 +49,7 @@ const disableSubmitButton = (buttonElement, inactiveButtonClass, inactive) => {
   } else {
     buttonElement.removeAttribute('disabled');
     buttonElement.classList.remove(inactiveButtonClass);
-  }
+  } 
 };
 
 // Включение кнопки submit и переключение ее состояния
