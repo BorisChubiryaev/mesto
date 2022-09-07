@@ -1,0 +1,9 @@
+.element__like {
+    min-width: 22px;
+    height: 19px;
+    margin: auto 0;
+    background-image: url('../../../images/buttons/VectorlikeDis.svg');
+    background-size: 22px 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

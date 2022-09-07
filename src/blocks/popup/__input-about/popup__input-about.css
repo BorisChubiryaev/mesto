@@ -1,0 +1,9 @@
+.popup__input-about {
+    margin-bottom: 35px;
+}
+
+@media screen and (max-width: 400px) {
+    .popup__input-about {
+        margin-bottom: 32px;
+    }
+}

@@ -1,0 +1,17 @@
+.form__button_invalid {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    color: #e5e5e5;
+}
+
+.form__button_invalid:hover {
+  cursor:default;
+}
+
+@media screen and (max-width: 400px) {
+    .form__button_invalid {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

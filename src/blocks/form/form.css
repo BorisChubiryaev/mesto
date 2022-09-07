@@ -1,0 +1,18 @@
+.form {
+  box-sizing: border-box;
+  padding: 34px 36px 37px;
+  display: grid;
+  grid-template: repeat(4, min-content) / 1fr;
+  background-color: #fff;
+  border-radius: 10px;
+  width: min-content;
+  height: min-content;
+  position: relative;
+}
+
+@media screen and (max-width: 450px) {
+  .form {
+    max-width: 282px;
+    padding: 25px 22px;
+  }
+}
