@@ -2,22 +2,22 @@ import './index.css';
 import { btnProfileEdit, btnElementAdd, templateHtml, elementsContainer, inputProfileName, inputProfileStatus } from '../utils/constants.js';
 import { Card } from '../components/Card.js';
 import { FormValidator, selectorsCurrent } from '../components/FormValidator.js';
-import { initialCards } from '../components/initialCards.js';
-import section from '../components/section.js';
-import popupForm from '../components/popupForm.js';
-import popupPicture from '../components/popupPicture.js';
-import userInf from '../components/userInf.js';
+import { initialCards } from '../utils/initialCards.js';
+import Section from '../components/Section.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import UserInfo from '../components/UserInfo.js';
 
 function createCard(item){
   const card = new Card(item, templateHtml, { handleCardClick: () => {
-    PopupPicture.openPopup(card);
+    popupWithImage.openPopup(card);
     }
   });
   const cardElement = card.createCard();
   return cardElement;
 }
 
-const defaultCardList = new section({
+const defaultCardList = new Section({
     data: initialCards,
     renderer: (item) => {defaultCardList.addItem(createCard(item))}
   },
@@ -25,17 +25,17 @@ const defaultCardList = new section({
 );
 defaultCardList.renderElements();
 
-const userInfo = new userInf({
+const userInfo = new UserInfo({
   name: '.profile__name',
   status:'.profile__status'
 });
-const PopupPicture = new popupPicture({ popupSelector: '.popup_picture' });
-PopupPicture.setEventListeners();
+const popupWithImage = new PopupWithImage({ popupSelector: '.popup_picture' });
+popupWithImage.setEventListeners();
 
-const popupEdit = new popupForm({
+const popupEdit = new PopupWithForm({
   popupSelector: '.popup_profile',
   handleFormSubmit: (formData) => {
-    userInfo.setuserInf({
+    userInfo.setUserInfo({
       name: formData.inputProfileName,
       status: formData.inputProfileStatus
     });
@@ -44,7 +44,7 @@ const popupEdit = new popupForm({
 });
 popupEdit.setEventListeners();
 
-const popupAdd = new popupForm({
+const popupAdd = new PopupWithForm({
   popupSelector: '.popup_add',
   handleFormSubmit: (formData) => {
     defaultCardList.addNewItem(createCard({
@@ -66,10 +66,9 @@ formAddCardValidator.enableValidation();
 
 btnProfileEdit.addEventListener('click', () => {
   formEditProfileValidator.removeInputErrors();
-  if (userInfo.getuserInf()) {
-    inputProfileName.value = userInfo.getuserInf().name;
-    inputProfileStatus.value = userInfo.getuserInf().status;
-  }
+  const { name, status } = userInfo.getUserInfo();
+  inputProfileName.value = name;
+  inputProfileStatus.value = status;
   popupEdit.openPopup();
 });
 
