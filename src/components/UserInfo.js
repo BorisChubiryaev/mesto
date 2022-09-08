@@ -1,4 +1,4 @@
-export default class userInf{
+export default class UserInfo{
   constructor(dataSelector){
     this._userNameSelector = dataSelector.name;
     this._userName = document.querySelector(this._userNameSelector);
@@ -6,12 +6,12 @@ export default class userInf{
     this._userStatus = document.querySelector(this._userStatusSelector);
   }
 
-  getuserInf(){
+  getUserInfo(){
     this._userData = {name: this._userName.textContent, status: this._userStatus.textContent};
     return this._userData;
   }
 
-  setuserInf(data){
+  setUserInfo(data){
     this._userName.textContent = data.name;
     this._userStatus.textContent = data.status;
   }
